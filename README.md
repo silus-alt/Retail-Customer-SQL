@@ -49,7 +49,7 @@ Retail-Customer-SQL/
 
 All tables share `Customer_ID` as the join key.
 
-**Source:** _[Add dataset source and link here]_
+**Source:** Synthetic retail customer dataset used for SQL practice.
 
 ## Visualizations
 
