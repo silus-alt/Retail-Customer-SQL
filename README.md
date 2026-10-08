@@ -4,15 +4,17 @@ An end-to-end SQL analysis of a retail beauty brand's customer data, linking tra
 
 ## Business Questions
 
-| Question | Approach |
-|---|---|
-| Do customers with heavy customer service usage also spend more? | Multi-table JOIN with pre-aggregated subqueries |
-| Does a customer service escalation change a customer's spending? | Balanced panel construction + paired t-test |
-| Which traffic source brings the highest-value customers? | First-touch attribution via correlated subquery |
-| How does each customer's spending rank across their own transactions? | `ROW_NUMBER()` partitioned by customer |
-| Is revenue growing month over month? | Monthly aggregation + `LAG()` |
-| Who are the most valuable customers, and who is at risk of churning? | RFM scoring + `NTILE()` decile segmentation |
+## Business Questions
 
+| Question | Approach | Notebook |
+|---|---|---|
+| Do customers with heavy customer service usage also spend more? | Multi-table JOIN with pre-aggregated subqueries | [01](notebooks/01_multi_table_joins.ipynb) |
+| Does a customer service escalation change a customer's spending? | Balanced panel construction + paired t-test | [01](notebooks/01_multi_table_joins.ipynb) |
+| How does each customer engage across all four channels? | Four-table LEFT JOIN on a unified customer list | [01](notebooks/01_multi_table_joins.ipynb) |
+| Which traffic source brings the highest-value customers? | First-touch attribution via correlated subquery | [01](notebooks/01_multi_table_joins.ipynb) |
+| How does each customer's spending rank across their own transactions? | `ROW_NUMBER()` partitioned by customer | [02](notebooks/02_window_functions.ipynb) |
+| Is revenue growing month over month? | Monthly aggregation + `LAG()` | [02](notebooks/02_window_functions.ipynb) |
+| Who are the most valuable customers, and who is at risk of churning? | RFM scoring + `NTILE()` decile segmentation | [02](notebooks/02_window_functions.ipynb) |
 ## Highlight: Escalation Impact Analysis
 
 A naive comparison of customers with and without escalation records conflates two different populations. To isolate the effect of an escalation, this analysis:
