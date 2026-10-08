@@ -22,6 +22,8 @@ A naive comparison of customers with and without escalation records conflates tw
 3. Computes each customer's average spending in the pre- and post-escalation periods
 4. Tests the difference with a **paired t-test**
 
+Result: No significant change in spending after escalation (n = 18, t = −0.33, p = 0.75).
+
 ![Escalation Slopegraph](images/escalation_slopegraph.png)
 
 ## Repository Structure
