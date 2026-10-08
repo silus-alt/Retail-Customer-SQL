@@ -4,8 +4,6 @@ An end-to-end SQL analysis of a retail beauty brand's customer data, linking tra
 
 ## Business Questions
 
-## Business Questions
-
 | Question | Approach | Notebook |
 |---|---|---|
 | Do customers with heavy customer service usage also spend more? | Multi-table JOIN with pre-aggregated subqueries | [01](notebooks/01_multi_table_joins.ipynb) |
@@ -15,6 +13,7 @@ An end-to-end SQL analysis of a retail beauty brand's customer data, linking tra
 | How does each customer's spending rank across their own transactions? | `ROW_NUMBER()` partitioned by customer | [02](notebooks/02_window_functions.ipynb) |
 | Is revenue growing month over month? | Monthly aggregation + `LAG()` | [02](notebooks/02_window_functions.ipynb) |
 | Who are the most valuable customers, and who is at risk of churning? | RFM scoring + `NTILE()` decile segmentation | [02](notebooks/02_window_functions.ipynb) |
+
 ## Highlight: Escalation Impact Analysis
 
 A naive comparison of customers with and without escalation records conflates two different populations. To isolate the effect of an escalation, this analysis:
